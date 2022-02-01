@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 800px;
+}
+
+:root {
+    --default-side-color: #069;
+    --btn-height: 150px;
+}
+
+.btn {
+    position: relative;
+    height: var(--btn-height);
+    width: 450px;
+    transform-style: preserve-3d;
+    transition: transform 300ms ease-in-out;
+    transform: translateZ(cal(--btn-height * .5))
+}
+
+.btn:hover {
+    transform: rotateX(-90deg) translateY(75px);
+}
+
+.side {
+    backface-visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4em;
+    font-weight: bold;
+}
+
+.default-side {
+    background-color: white;
+    border: 10px solid var(--default-side-color);
+    color: var(--default-side-color);
+    transform: translateZ(calc(var(--btn-height) * .5))
+}
+
+.hover-side {
+    color: white;
+    background-color: var(--default-side-color);
+    transform: rotateX(90deg) translateZ(75px);
+}

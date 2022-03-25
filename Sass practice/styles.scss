@@ -1,0 +1,73 @@
+@import "./_resets.scss";
+@import "./_variables.scss";
+@import "./_functions.scss";
+
+@function weight($weightName) {
+  @return map-get($font-weights, $weightName);
+}
+
+@mixin flexCenter($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin marginSize($top, $bottom, $left, $right) {
+  margin-top: $top;
+  margin-bottom: $bottom;
+  margin-left: $left;
+  margin-right: $right;
+}
+
+@mixin theme($lightTheme: true) {
+  @if $lightTheme {
+    background: lighten($primaryColor, 100%);
+    color: darken($textColor, 100%);
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+body {
+  background: $primaryColor;
+  color: $textColor;
+}
+
+.main {
+  @include flexCenter(row);
+  @include marginSize(6rem, 0, 7rem, 0);
+  #{&}Editable {
+    color: $important;
+    font-weight: weight(medium);
+    font-size: size(large);
+  }
+
+  &:hover {
+    background-color: $hover;
+  }
+
+  #{&}SecondParagraph {
+    color: $secondary;
+  }
+
+  @include mobile {
+    flex-direction: column;
+  }
+
+  .copyCSS {
+    @extend .mainEditable;
+
+    &:hover {
+      color: pink;
+    }
+  }
+}
+
+.light {
+  @include theme($lightTheme: true);
+}

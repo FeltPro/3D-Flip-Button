@@ -1,0 +1,64 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #272727;
+  color: #fff;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 6rem;
+  margin-bottom: 0;
+  margin-left: 7rem;
+  margin-right: 0;
+}
+
+.main .mainEditable, .main .copyCSS {
+  color: red;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.main:hover {
+  background-color: blue;
+}
+
+.main .mainSecondParagraph {
+  color: yellow;
+}
+
+@media (max-width: 800px) {
+  .main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.main .copyCSS:hover {
+  color: pink;
+}
+
+.light {
+  background: white;
+  color: black;
+}
+/*# sourceMappingURL=styles.css.map */

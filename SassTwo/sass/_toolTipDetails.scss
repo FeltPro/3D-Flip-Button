@@ -1,0 +1,10 @@
+@mixin toolTips($colour) {
+    font-family:monospace;
+            font-size: 1.7rem;
+            padding: 1rem;
+            width: max-content;
+            max-width: 100%;
+            background: $colour;
+            border-radius: 0.3rem;
+            text-align: center;
+}

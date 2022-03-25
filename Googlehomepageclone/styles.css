@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 25px;
+  align-items: center;
+}
+
+.header a {
+  margin-right: 20px;
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 15px;
+  text-decoration: inherit;
+}
+
+.header a:hover {
+  text-decoration: underline;
+}
+
+.header_right{
+  display: flex;
+  align-items: center;
+  min-width: 13vw;
+  justify-content: space-between;
+}
+
+.header_right .header_apps {
+  margin-right: 10px;
+}
+
+.mainBody {
+  flex: 1;
+  display: flex;
+  margin-top: 6%;
+  flex-direction: column;
+}
+
+.mainBody img {
+  object-fit: contain;
+  height: 90px;
+}
+
+.search_input {
+  display: flex;
+  align-items: center;
+  border: 1px solid lightgray;
+  height: 40px;
+  padding: 10px 20px;
+  border-radius: 999px;
+  width: 130vw;
+  margin: 0 auto;
+  margin-top: 30px;
+  max-width: 590px;
+}
+
+.search_input input {
+  flex: 1;
+  padding: 1px 5px;
+  border: none;
+  outline: none;
+}
+
+.search_input .material-icons {
+  color: gray;
+}
+
+.search_buttons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.search_buttons_button {
+  margin: 5px;
+  padding: 10px 15px;
+  background-color: #f8f8f8;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.buttons {
+  background-color: #f8f8f8;
+  margin: 0px 5px 0px 5px;
+  padding: 10px 15px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+
+.footer {
+  color: darkgray;
+  background-color: #f8f8f8;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px;
+  align-items: center;
+}
+
+.footer a {
+  color: darkgray;
+  margin-right: 20px;
+  font-size: 15px;
+  text-decoration: inherit;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.line {
+background-color: lightgray;
+height: 1px;
+width: 100%
+}
+
+.footer_top {
+  background-color: #f8f8f8;
+  display: flex;
+  padding: 20px 15px;
+  margin-bottom: -15px;
+  justify-content: space-between;
+}
+
+.sf_logo {
+  display: flex;
+  align-items: center;
+  min-width: 13vw;
+  justify-content: space-between;
+}
+
+.sf_logo img {
+  object-fit: contain;
+  height: 20px;
+}
+
+
+.footer_right{
+  display: flex;
+  align-items: center;
+  min-width: 13vw;
+  justify-content: space-between;
+}
+
+.footer_middle img {
+  object-fit: contain;
+  height: 15px;
+}
+
+.footer_right .header_apps {
+  margin-right: 10px;
+}
